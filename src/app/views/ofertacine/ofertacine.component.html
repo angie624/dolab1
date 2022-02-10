@@ -1,0 +1,115 @@
+<style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+
+<body>
+  
+<header>
+<div class="collapse bg-dark" id="navbarHeader">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-md-7 py-4">
+        <h4 class="text-white">About</h4>
+        <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+      </div>
+      <div class="col-sm-4 offset-md-1 py-4">
+        <h4 class="text-white">Contact</h4>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white">Follow on Twitter</a></li>
+          <li><a href="#" class="text-white">Like on Facebook</a></li>
+          <li><a href="#" class="text-white">Email me</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="navbar navbar-dark bg-dark shadow-sm">
+  <div class="container">
+   
+   
+        <a>
+            <div style="text-align: center;">
+        <button style="position: absolute;top: 15%; margin-left: 72%;" class="btn btn-outline-light" [routerLink]="['/usuario']" type="submit">Registro</button>
+            </div>
+        </a>
+        <a>
+        <button class="btn btn-primary" [routerLink]="['/login']" type="submit">Inicio sesión</button>
+        </a>
+      
+        
+  </div>
+</div>
+</header>
+  
+<br>
+<button mat-button color="primary" routerLink="/cine" style="float:right; margin-right: 600px;">Volver <mat-icon></mat-icon></button>
+<br>
+  <div class="album py-5 bg-light">
+    <div class="container">
+  
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="card-body">
+                <img src="assets/img/o1.PNG" width="325px" height="200px">
+                <hr>
+                <h4><b>Descuento 50%</b></h4>
+              <p class="card-text">Únicamente por esta semana, tendrás un descuento del 50% de tu precio total por cualquier compra de peliculas que hagas, aprovecha!</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary"  routerLink="/pagoof" >Aplicar oferta</button>
+                </div>
+        
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <img src="assets/img/o2.PNG" width="325px" height="200px">
+              <hr>
+                <h4><b>Películas 2x1</b></h4>
+              <p class="card-text">Puedes obtener 2 películas por el precio de 1. Si compras más de 5, te obsequiaremos una oferta totalmente gratis. Aplica únicamente para suscriptores, no para cines.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" routerLink="/pagoof">Aplicar oferta</button>
+                </div>
+          
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+              <div class="card-body">
+               <img src="assets/img/o3.PNG" width="325px" height="200px">
+               <hr>
+                <h4><b>Descuento 15%</b></h4>
+              <p class="card-text">Únicamente por esta semana, tendrás un descuento del 15% de tu precio total por cualquier compra de peliculas que hagas, aprovecha!</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" routerLink="/pagoof">Aplicar oferta</button>
+                </div>
+             
+              </div>
+            </div>
+          </div>
+        </div>
+  
+  </div>
+
+

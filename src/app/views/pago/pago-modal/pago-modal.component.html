@@ -1,0 +1,34 @@
+<mat-form-field appearance="fill">
+    <mat-label>Cuenta bancaria/Nombre usuario:</mat-label>
+    <input matInput [(ngModel)]="pago.cuenta">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Puntos/Nombre usuario:</mat-label>
+    <textarea matInput [(ngModel)]="pago.puntos"></textarea>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Fecha y hora:</mat-label>
+    <input type="datetime-local" matInput [(ngModel)]="pago.fecha">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label *ngIf="pago.oferta">{{pago.oferta.nombreOferta}}</mat-label>
+    <mat-select matInput placeholder="Seleccione la oferta" [(ngModel)]="pago.oferta">
+      <mat-option *ngFor="let o of oferta" [value]="o">
+        {{o.nombreOferta}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-button color="primary" (click)="aceptar()">
+    Aceptar
+ </button>
+
+ <button mat-button color="accent" (click)="cerrar()">
+    Cancelar
+ </button>
+  
+  
+

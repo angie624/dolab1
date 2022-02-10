@@ -1,0 +1,29 @@
+<mat-form-field appearance="fill">
+    <mat-label>Nombre:</mat-label>
+    <input matInput [(ngModel)]="oferta.nombreOferta">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Descripción:</mat-label>
+    <textarea matInput [(ngModel)]="oferta.descripcion"></textarea>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Precio:</mat-label>
+    <input matInput [(ngModel)]="oferta.precio">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Fecha vencimiento:</mat-label>
+    <input type="date" matInput [(ngModel)]="oferta.fechaVencimiento">
+  </mat-form-field>
+  
+  <button mat-button color="primary" (click)="aceptar()">
+    Aceptar
+ </button>
+
+ <button mat-button color="accent" (click)="cerrar()">
+    Cancelar
+ </button>
+  
+  

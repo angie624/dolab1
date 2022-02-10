@@ -1,0 +1,60 @@
+<mat-form-field appearance="fill">
+    <mat-label>Título:</mat-label>
+    <input matInput [(ngModel)]="pelicula.titulo">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label *ngIf="pelicula.categoria">{{pelicula.categoria.nombreCategoria}}</mat-label>
+    <mat-select matInput placeholder="Seleccione la categoría" [(ngModel)]="pelicula.categoria">
+      <mat-option *ngFor="let c of categoria" [value]="c">
+        {{c.nombreCategoria}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Descripcion:</mat-label>
+    <textarea matInput [(ngModel)]="pelicula.descripcion"></textarea>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Fecha:</mat-label>
+    <input type="date" matInput [(ngModel)]="pelicula.fecha">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label *ngIf="pelicula.director">{{pelicula.director.nombreDirector}}</mat-label>
+    <mat-select matInput placeholder="Seleccione el director" [(ngModel)]="pelicula.director">
+      <mat-option *ngFor="let d of director" [value]="d">
+        {{d.nombreDirector}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label *ngIf="pelicula.actor">{{pelicula.actor.nombreActor}}</mat-label>
+    <mat-select matInput placeholder="Seleccione el actor" [(ngModel)]="pelicula.actor">
+      <mat-option *ngFor="let a of actor" [value]="a">
+        {{a.nombreActor}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label *ngIf="pelicula.usuario">{{pelicula.usuario.nombreUsuario}}</mat-label>
+    <mat-select matInput placeholder="Seleccione el usuario" [(ngModel)]="pelicula.usuario">
+      <mat-option *ngFor="let u of usuario" [value]="u">
+        {{u.nombreUsuario}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-button color="primary" (click)="aceptar()">
+    Aceptar
+ </button>
+
+ <button mat-button color="accent" (click)="cerrar()">
+    Cancelar
+ </button>
+  
+  

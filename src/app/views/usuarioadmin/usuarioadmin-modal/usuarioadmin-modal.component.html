@@ -1,0 +1,44 @@
+<mat-form-field appearance="fill">
+    <mat-label>Nombre de usuario:</mat-label>
+    <input matInput [(ngModel)]="usuario.nombreUsuario"> 
+  </mat-form-field>
+ 
+  <mat-form-field appearance="fill">
+    <mat-label>Clave:</mat-label>
+    <input type="password" matInput [(ngModel)]="usuario.clave">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Nombre:</mat-label>
+    <input matInput [(ngModel)]="usuario.nombre">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Dirección/Apellido:</mat-label>
+    <input matInput [(ngModel)]="usuario.apellido">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Correo:</mat-label>
+    <input matInput [(ngModel)]="usuario.correo">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Rol:</mat-label>
+    <select matNativeControl required>
+      <option value="cine">Cine</option>
+      <option value="suscriptor">Suscriptor</option>
+    </select>
+  </mat-form-field>
+
+  <button mat-button color="primary" (click)="aceptar()">
+    Aceptar
+ </button>
+
+ <button mat-button color="accent" (click)="cerrar()">
+    Cancelar
+ </button>
+  
+  
+
+

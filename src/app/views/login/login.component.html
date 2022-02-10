@@ -1,0 +1,26 @@
+<div class="login">
+    <form class="custom-form" method="post">
+      <h2>Inicio sesión</h2>
+      <input
+        type="text"
+        [(ngModel)]="nombreUsuario"
+        name="nombreUsuario"
+        placeholder="Ingrese su nombre de usuario"
+        required="required"
+      />
+      <input
+        type="password"
+        [(ngModel)]="clave"
+        name="clave"
+        placeholder="Ingrese su contraseña"
+        required="required"
+      />
+      <label>Seleccione su rol</label>
+      <hr>
+      <button type="submit" (click)="logInSuscrip()" routerLink="/suscriptor">Suscriptor</button>
+      <hr>
+      <button type="submit"  (click)="logInAdmin()" routerLink="/administrador">Administrador</button>
+      <hr>
+      <button type="submit" (click)="logInCine()" routerLink="/cine">Cine</button>
+    </form>
+  </div>
